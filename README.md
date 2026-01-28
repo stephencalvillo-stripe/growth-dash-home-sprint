@@ -22,8 +22,11 @@ A new prototype for the Stripe Dashboard Home experience featuring an AI-powered
 
 ## Getting Started
 
-1. Open `prototype/index.html` in your browser
+1. Open `index.html` in your browser, or visit the live prototype at:
+   **https://stephencalvillo-stripe.github.io/growth-dash-home-sprint/**
+
 2. View the dashboard with sample metrics
+
 3. Try the AI assistant with queries like:
    - "What's my balance?"
    - "Show recent payments"
@@ -34,13 +37,12 @@ A new prototype for the Stripe Dashboard Home experience featuring an AI-powered
 ## Project Structure
 
 ```
-Growth Home Sprint/
-├── prototype/
-│   ├── index.html    # Main HTML structure
-│   ├── styles.css    # All styling and animations
-│   └── script.js     # View switching and AI mock logic
-├── Exports/          # Design reference images
-├── README.md         # This file
+growth-dash-home-sprint/
+├── index.html           # Main HTML structure
+├── styles.css           # All styling and animations
+├── script.js            # View switching and AI mock logic
+├── Exports/             # Design reference images
+├── README.md            # This file
 └── UX_DOCUMENTATION.md  # Detailed UX documentation
 ```
 
