@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Home Sprint - Stripe Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <!-- Collapsed Navigation -->
+        <nav class="collapsed-nav">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="#0A2540"/>
+                    <path d="M16 10C14.9 10 14 10.9 14 12V20C14 21.1 14.9 22 16 22C17.1 22 18 21.1 18 20V12C18 10.9 17.1 10 16 10Z" fill="white"/>
+                    <path d="M12 14C10.9 14 10 14.9 10 16V20C10 21.1 10.9 22 12 22C13.1 22 14 21.1 14 20V16C14 14.9 13.1 14 12 14Z" fill="white"/>
+                    <path d="M20 14C18.9 14 18 14.9 18 16V20C18 21.1 18.9 22 20 22C21.1 22 22 21.1 22 20V16C22 14.9 21.1 14 20 14Z" fill="white"/>
+                </svg>
+            </div>
+
+            <div class="nav-items">
+                <button class="nav-item active">
+                    <span class="material-symbols-outlined">home</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">list_alt</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">sync_alt</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">person</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                </button>
+            </div>
+
+            <div class="nav-items-middle">
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">schedule</span>
+                </button>
+            </div>
+
+            <div class="nav-items-bottom">
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">layers</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                </button>
+                <button class="nav-item">
+                    <span class="material-symbols-outlined">more_horiz</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="stripe-logo-mark">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 6L20 6L16 18L0 18L4 6Z" fill="#0A2540"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="test-mode-toggle">
+                    <span class="test-mode-label">Test mode</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <button class="btn-icon">
+                    <span class="material-symbols-outlined">apps</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <button class="btn-create">
+                    <span class="material-symbols-outlined">add</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="content">
+                <h1 class="page-title">Home</h1>
+
+                <!-- Option 1 View -->
+                <div id="option-1" class="home-view active">
+                    <!-- CTA Group -->
+                    <div class="cta-group">
+                        <button class="cta-btn">
+                            <span class="material-symbols-outlined">bolt</span>
+                            <span>Instant Payout</span>
+                        </button>
+                        <button class="cta-btn">
+                            <span class="material-symbols-outlined">swap_horiz</span>
+                            <span>Transfer</span>
+                        </button>
+                        <button class="cta-btn">
+                            <span class="material-symbols-outlined">send</span>
+                            <span>Send money</span>
+                        </button>
+                        <button class="cta-btn">
+                            <span class="material-symbols-outlined">add_circle</span>
+                            <span>Receive money</span>
+                        </button>
+                    </div>
+
+                    <!-- Home Row 1 -->
+                    <div class="row-container">
+                        <div class="home-row">
+                        <!-- Net Volume Card (Large) -->
+                        <div class="metric-card large">
+                            <div class="card-header">
+                                <h3>Net volume</h3>
+                            </div>
+                            <div class="card-content net-volume-content">
+                                <div class="metric-info">
+                                    <div class="metric-value-large">$24,532</div>
+                                    <div class="metric-label">Last 7 days</div>
+                                </div>
+                                <div class="chart-placeholder large-chart">
+                                    <svg viewBox="0 0 100 80" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                                        <polyline points="0,60 10,55 20,58 30,45 40,50 50,35 60,40 70,30 80,38 90,25 100,28"
+                                                  fill="none" stroke="#CBD5E0" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Balance & Payouts Stack -->
+                        <div class="metric-stack">
+                            <!-- Balance Card -->
+                            <div class="metric-card">
+                                <div class="card-header">
+                                    <h3>Balance</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="metric-value">$8,420</div>
+                                    <div class="chart-placeholder small-chart">
+                                        <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                                            <polyline points="0,30 12,28 25,32 37,25 50,20 62,22 75,18 87,15 100,12"
+                                                      fill="none" stroke="#CBD5E0" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payouts Card -->
+                            <div class="metric-card">
+                                <div class="card-header">
+                                    <h3>Payouts</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="metric-value">$12,840</div>
+                                    <div class="chart-placeholder small-chart">
+                                        <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                                            <polyline points="0,25 12,22 25,28 37,20 50,18 62,24 75,16 87,20 100,14"
+                                                      fill="none" stroke="#CBD5E0" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Home Row 2 -->
+                    <div class="row-container">
+                        <div class="home-row">
+                        <!-- Product Metric 1 -->
+                        <div class="metric-card">
+                            <div class="card-header">
+                                <h3>Relevant product metric</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="bar-chart-container">
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                    <div class="bar" style="height: 45%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 55%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Metric 2 -->
+                        <div class="metric-card">
+                            <div class="card-header">
+                                <h3>Relevant product metric</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="list-placeholder">
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks/Alerts -->
+                        <div class="metric-card">
+                            <div class="card-header">
+                                <h3>Tasks (alerts)</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="list-placeholder">
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                    <div class="list-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- AI Prompt Area -->
+                    <div class="ai-prompt-container">
+                        <div class="ai-response-area" id="ai-response">
+                            <button class="ai-close-btn" id="ai-close">
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+                        <div class="ai-prompt-input-wrapper">
+                            <button class="ai-attach-btn">
+                                <span class="material-symbols-outlined">attach_file</span>
+                            </button>
+                            <input type="text" class="ai-prompt-input" id="ai-input" placeholder="Ask, search, or create anything">
+                            <button class="ai-send-btn" id="ai-send">
+                                <span class="material-symbols-outlined">arrow_upward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 2 View -->
+                <div id="option-2" class="home-view">
+                    <div class="modules-grid">
+                        <!-- Option 2 modules will go here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Version Toggle -->
+        <div class="version-toggle">
+            <button class="version-btn active" data-view="option-1">Option 1</button>
+            <button class="version-btn" data-view="option-2">Option 2</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
