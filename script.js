@@ -198,10 +198,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active state for AI input wrapper
     aiInput.addEventListener('focus', function() {
+        console.log('AI input focused - adding active class');
         aiInputWrapper.classList.add('active');
     });
 
     aiInput.addEventListener('blur', function() {
+        console.log('AI input blurred - removing active class');
         aiInputWrapper.classList.remove('active');
     });
 });
