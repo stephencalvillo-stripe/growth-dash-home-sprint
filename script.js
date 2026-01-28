@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const aiSendBtn = document.getElementById('ai-send');
     const aiResponse = document.getElementById('ai-response');
     const aiCloseBtn = document.getElementById('ai-close');
+    const aiInputWrapper = document.querySelector('.ai-prompt-input-wrapper');
 
     // Mock Stripe test data responses
     const mockResponses = {
@@ -193,5 +194,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             aiResponse.classList.remove('active');
         }
+    });
+
+    // Active state for AI input wrapper
+    aiInput.addEventListener('focus', function() {
+        aiInputWrapper.classList.add('active');
+    });
+
+    aiInput.addEventListener('blur', function() {
+        aiInputWrapper.classList.remove('active');
     });
 });
