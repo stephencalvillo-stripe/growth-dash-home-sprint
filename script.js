@@ -169,6 +169,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Clear input
         aiInput.value = '';
+        // Remove has-text class from send button
+        aiSendBtn.classList.remove('has-text');
     }
 
     // Send button click
@@ -205,5 +207,14 @@ document.addEventListener('DOMContentLoaded', function() {
     aiInput.addEventListener('blur', function() {
         console.log('AI input blurred - removing active class');
         aiInputWrapper.classList.remove('active');
+    });
+
+    // Update send button style when user types
+    aiInput.addEventListener('input', function() {
+        if (this.value.trim().length > 0) {
+            aiSendBtn.classList.add('has-text');
+        } else {
+            aiSendBtn.classList.remove('has-text');
+        }
     });
 });
