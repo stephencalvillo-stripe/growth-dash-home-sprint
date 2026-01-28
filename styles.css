@@ -187,7 +187,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #635BFF;
+    background: #000000;
     border: none;
     color: white;
     cursor: pointer;
@@ -199,7 +199,7 @@ body {
 }
 
 .btn-create:hover {
-    background: #5145E5;
+    background: #1a1a1a;
     transform: scale(1.05);
 }
 
