@@ -43,7 +43,7 @@ body {
 .nav-items {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
     padding: 0 12px;
 }
@@ -60,7 +60,7 @@ body {
 .nav-items-bottom {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
     padding: 0 12px;
     margin-top: 24px;
