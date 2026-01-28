@@ -396,26 +396,38 @@ body {
 }
 
 /* Phase 1: Onboarding */
-.onboarding-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 32px;
+/* Welcome Message (shared across phases) */
+.welcome-message {
+    margin-bottom: 16px;
 }
 
-.onboarding-greeting h2 {
+.welcome-greeting {
     font-size: 24px;
     font-weight: 600;
     color: #0A2540;
     margin: 0 0 8px 0;
 }
 
-.onboarding-greeting p {
+.welcome-text {
     font-size: 15px;
+    font-weight: 400;
     color: #425466;
     margin: 0;
-    max-width: 600px;
     line-height: 1.6;
+}
+
+.welcome-divider {
+    height: 1px;
+    background: #E3E8EE;
+    margin-bottom: 16px;
+}
+
+/* Phase 1 Specific */
+.onboarding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
 }
 
 .onboarding-date {
