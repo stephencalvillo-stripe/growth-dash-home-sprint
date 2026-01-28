@@ -73,12 +73,17 @@
                 </div>
             </div>
             <div class="header-right">
-                <div class="test-mode-toggle">
-                    <span class="test-mode-label">Test mode</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" checked>
-                        <span class="toggle-slider"></span>
-                    </label>
+                <div class="header-dropdown">
+                    <select id="option-select" class="dropdown-select">
+                        <option value="option-1">Option 1</option>
+                        <option value="option-2">Option 2</option>
+                    </select>
+                </div>
+                <div class="header-dropdown">
+                    <select id="phase-select" class="dropdown-select">
+                        <option value="phase-1">Phase 1</option>
+                        <option value="phase-2">Phase 2</option>
+                    </select>
                 </div>
                 <button class="btn-icon">
                     <span class="material-symbols-outlined">apps</span>
@@ -102,6 +107,56 @@
 
                 <!-- Option 1 View -->
                 <div id="option-1" class="home-view active">
+                    <!-- Phase 1: Onboarding -->
+                    <div id="phase-1" class="phase-view active">
+                        <div class="onboarding-header">
+                            <div class="onboarding-greeting">
+                                <h2>Good morning, Sisi!</h2>
+                                <p>You're on your way to setting up your Stripe account so you can start making money! Let me know if you need any help. Just ask me below.</p>
+                            </div>
+                            <div class="onboarding-date">Wednesday, January 28, 2026</div>
+                        </div>
+
+                        <div class="onboarding-row">
+                            <div class="onboarding-card setup-guide">
+                                <h3>Setup guide</h3>
+                                <div class="setup-item completed">
+                                    <span class="material-symbols-outlined check">check_circle</span>
+                                    <div class="setup-placeholder"></div>
+                                </div>
+                                <div class="setup-item in-progress">
+                                    <span class="material-symbols-outlined loading">progress_activity</span>
+                                    <div class="setup-placeholder"></div>
+                                </div>
+                                <div class="setup-item">
+                                    <div class="setup-placeholder small"></div>
+                                </div>
+                                <div class="setup-item">
+                                    <div class="setup-placeholder large"></div>
+                                </div>
+                                <div class="setup-item">
+                                    <div class="setup-placeholder medium"></div>
+                                </div>
+                            </div>
+
+                            <div class="onboarding-cards-stack">
+                                <div class="onboarding-card upsell-card dark">
+                                    <h3>Payments upsell</h3>
+                                    <div class="upsell-placeholder"></div>
+                                    <div class="upsell-placeholder small"></div>
+                                </div>
+
+                                <div class="onboarding-card upsell-card light">
+                                    <h3>Product upsell</h3>
+                                    <div class="upsell-placeholder"></div>
+                                    <div class="upsell-placeholder small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: Metrics Dashboard -->
+                    <div id="phase-2" class="phase-view">
                     <!-- CTA Group -->
                     <div class="cta-group">
                         <button class="cta-btn">
@@ -234,9 +289,19 @@
                         </div>
                     </div>
                     </div>
+                    </div>
+                </div>
 
-                    <!-- AI Prompt Area -->
-                    <div class="ai-prompt-container">
+                <!-- Option 2 View -->
+                <div id="option-2" class="home-view">
+                    <div class="modules-grid">
+                        <!-- Option 2 modules will go here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Prompt Area -->
+            <div class="ai-prompt-container">
                         <div class="ai-response-area" id="ai-response">
                             <button class="ai-close-btn" id="ai-close">
                                 <span class="material-symbols-outlined">close</span>
@@ -252,22 +317,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
-
-                <!-- Option 2 View -->
-                <div id="option-2" class="home-view">
-                    <div class="modules-grid">
-                        <!-- Option 2 modules will go here -->
-                    </div>
-                </div>
-            </div>
         </main>
-
-        <!-- Version Toggle -->
-        <div class="version-toggle">
-            <button class="version-btn active" data-view="option-1">Option 1</button>
-            <button class="version-btn" data-view="option-2">Option 2</button>
-        </div>
     </div>
 
     <script src="script.js"></script>

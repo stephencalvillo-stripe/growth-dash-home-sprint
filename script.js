@@ -2,25 +2,31 @@
 
 console.log('Growth Home Sprint prototype loaded');
 
-// Version Toggle Functionality
+// Dropdown Navigation Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const versionButtons = document.querySelectorAll('.version-btn');
-    const homeViews = document.querySelectorAll('.home-view');
+    const optionSelect = document.getElementById('option-select');
+    const phaseSelect = document.getElementById('phase-select');
 
-    versionButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetView = this.getAttribute('data-view');
+    // Option switching
+    optionSelect.addEventListener('change', function() {
+        const selectedOption = this.value;
+        const homeViews = document.querySelectorAll('.home-view');
 
-            // Remove active class from all buttons and views
-            versionButtons.forEach(btn => btn.classList.remove('active'));
-            homeViews.forEach(view => view.classList.remove('active'));
+        homeViews.forEach(view => view.classList.remove('active'));
+        document.getElementById(selectedOption).classList.add('active');
 
-            // Add active class to clicked button and corresponding view
-            this.classList.add('active');
-            document.getElementById(targetView).classList.add('active');
+        console.log('Switched to:', selectedOption);
+    });
 
-            console.log('Switched to:', targetView);
-        });
+    // Phase switching
+    phaseSelect.addEventListener('change', function() {
+        const selectedPhase = this.value;
+        const phaseViews = document.querySelectorAll('.phase-view');
+
+        phaseViews.forEach(view => view.classList.remove('active'));
+        document.getElementById(selectedPhase).classList.add('active');
+
+        console.log('Switched to:', selectedPhase);
     });
 
     // AI Mock Functionality
