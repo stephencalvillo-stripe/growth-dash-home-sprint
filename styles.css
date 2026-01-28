@@ -474,6 +474,10 @@ body {
     gap: 8px;
 }
 
+.onboarding-cards-stack .onboarding-card {
+    flex: 1;
+}
+
 .setup-item {
     display: flex;
     align-items: center;
@@ -525,12 +529,12 @@ body {
 
 .upsell-card.dark {
     background:
-        linear-gradient(rgba(66, 84, 102, 0.95), rgba(66, 84, 102, 0.95)) padding-box,
-        linear-gradient(to bottom, #525F6F, #425466) border-box;
+        linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
+        linear-gradient(to bottom, #F7FAFC, #E3E8EE) border-box;
 }
 
 .upsell-card.dark h3 {
-    color: white;
+    color: #0A2540;
 }
 
 .upsell-card.light {
@@ -541,13 +545,13 @@ body {
 
 .upsell-placeholder {
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #E3E8EE;
     border-radius: 4px;
     margin-bottom: 12px;
 }
 
 .upsell-card.dark .upsell-placeholder {
-    background: rgba(255, 255, 255, 0.2);
+    background: #E3E8EE;
 }
 
 .upsell-card.light .upsell-placeholder {
