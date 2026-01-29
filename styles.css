@@ -580,7 +580,7 @@ body {
 .floating-setup-guide {
     position: fixed;
     bottom: 24px;
-    left: 96px;
+    right: 24px;
     width: 360px;
     background: #F5F6F8;
     padding: 8px;
@@ -588,7 +588,7 @@ body {
     z-index: 1000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .floating-setup-guide.visible {
@@ -628,13 +628,13 @@ body {
 }
 
 .setup-guide.animating {
-    animation: moveToCorner 0.6s ease-in-out forwards;
+    animation: moveToCorner 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
     z-index: 1001;
 }
 
 /* AI Prompt Container with Floating Guide */
 .ai-prompt-container.with-floating-guide {
-    left: 472px;
+    right: 400px;
 }
 
 /* CTA Group */
@@ -867,7 +867,7 @@ body {
     gap: 8px;
     max-height: 50vh;
     overflow-y: auto;
-    transition: left 0.3s ease;
+    transition: right 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .ai-response-area {

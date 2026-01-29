@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 aiPromptContainer.classList.add('with-floating-guide');
 
                 console.log('Transitioned to payments page');
-            }, 600); // Match animation duration
+            }, 800); // Match animation duration
         });
     }
 });
