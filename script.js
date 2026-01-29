@@ -255,4 +255,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 800); // Match animation duration
         });
     }
+
+    // Home Navigation Click Handler
+    const homeNavBtn = document.getElementById('home-nav-btn');
+    if (homeNavBtn) {
+        homeNavBtn.addEventListener('click', function() {
+            console.log('Home navigation clicked - returning to home page');
+
+            // Hide floating guide
+            floatingGuide.classList.remove('visible');
+
+            // Reset AI prompt container width
+            aiPromptContainer.classList.remove('with-floating-guide');
+
+            // Hide all home views
+            const homeViews = document.querySelectorAll('.home-view');
+            homeViews.forEach(view => view.classList.remove('active'));
+
+            // Show Option 1 home view (Phase 1)
+            document.getElementById('option-1').classList.add('active');
+
+            // Reset setup guide visibility and animation
+            if (setupGuide) {
+                setupGuide.style.display = '';
+                setupGuide.classList.remove('animating');
+            }
+
+            console.log('Returned to home page');
+        });
+    }
 });
