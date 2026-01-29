@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const paymentsUpsell = document.getElementById('payments-upsell');
     const setupGuide = document.querySelector('.onboarding-card.setup-guide');
     const floatingGuide = document.getElementById('floating-guide');
+    const aiPromptContainer = document.querySelector('.ai-prompt-container');
 
     if (paymentsUpsell) {
         paymentsUpsell.addEventListener('click', function() {
@@ -246,6 +247,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     setupGuide.style.display = 'none';
                 }
                 floatingGuide.classList.add('visible');
+
+                // Adjust AI prompt container width
+                aiPromptContainer.classList.add('with-floating-guide');
 
                 console.log('Transitioned to payments page');
             }, 600); // Match animation duration

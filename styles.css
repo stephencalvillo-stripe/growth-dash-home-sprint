@@ -579,9 +579,24 @@ body {
 /* Floating Setup Guide */
 .floating-setup-guide {
     position: fixed;
-    bottom: 160px;
-    right: 24px;
-    width: 320px;
+    bottom: 24px;
+    left: 96px;
+    width: 360px;
+    background: #F5F6F8;
+    padding: 8px;
+    border-radius: 12px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.floating-setup-guide.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.floating-setup-guide-inner {
     background:
         linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
         linear-gradient(to bottom, #FFFFFF, #E6E6E6) border-box;
@@ -593,15 +608,6 @@ body {
         0px 1px 1px 0px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.floating-setup-guide.visible {
-    opacity: 1;
-    pointer-events: all;
 }
 
 .floating-setup-guide h3 {
@@ -624,6 +630,11 @@ body {
 .setup-guide.animating {
     animation: moveToCorner 0.6s ease-in-out forwards;
     z-index: 1001;
+}
+
+/* AI Prompt Container with Floating Guide */
+.ai-prompt-container.with-floating-guide {
+    left: 472px;
 }
 
 /* CTA Group */
@@ -856,6 +867,7 @@ body {
     gap: 8px;
     max-height: 50vh;
     overflow-y: auto;
+    transition: left 0.3s ease;
 }
 
 .ai-response-area {
