@@ -563,6 +563,69 @@ body {
     margin-bottom: 0;
 }
 
+/* Clickable Upsell Card */
+#payments-upsell {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#payments-upsell:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0px 4px 8px 0px rgba(48, 49, 61, 0.12),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* Floating Setup Guide */
+.floating-setup-guide {
+    position: fixed;
+    bottom: 160px;
+    right: 24px;
+    width: 320px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
+        linear-gradient(to bottom, #FFFFFF, #E6E6E6) border-box;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow:
+        0px 2px 5px 0px rgba(48, 49, 61, 0.08),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.floating-setup-guide.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.floating-setup-guide h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0A2540;
+    margin: 0 0 20px 0;
+}
+
+/* Animation for setup guide moving to corner */
+@keyframes moveToCorner {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(calc(100vw - 100% - 96px), calc(100vh - 100% - 184px)) scale(0.9);
+    }
+}
+
+.setup-guide.animating {
+    animation: moveToCorner 0.6s ease-in-out forwards;
+    z-index: 1001;
+}
+
 /* CTA Group */
 .cta-group {
     display: flex;

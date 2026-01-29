@@ -217,4 +217,38 @@ document.addEventListener('DOMContentLoaded', function() {
             aiSendBtn.classList.remove('has-text');
         }
     });
+
+    // Payments Upsell Click Handler
+    const paymentsUpsell = document.getElementById('payments-upsell');
+    const setupGuide = document.querySelector('.onboarding-card.setup-guide');
+    const floatingGuide = document.getElementById('floating-guide');
+
+    if (paymentsUpsell) {
+        paymentsUpsell.addEventListener('click', function() {
+            console.log('Payments upsell clicked - transitioning to payments page');
+
+            // Animate setup guide to bottom right corner
+            if (setupGuide) {
+                setupGuide.classList.add('animating');
+            }
+
+            // Wait for animation to complete, then switch pages
+            setTimeout(() => {
+                // Hide all home views
+                const homeViews = document.querySelectorAll('.home-view');
+                homeViews.forEach(view => view.classList.remove('active'));
+
+                // Show payments page
+                document.getElementById('payments-page').classList.add('active');
+
+                // Hide the animating setup guide and show floating guide
+                if (setupGuide) {
+                    setupGuide.style.display = 'none';
+                }
+                floatingGuide.classList.add('visible');
+
+                console.log('Transitioned to payments page');
+            }, 600); // Match animation duration
+        });
+    }
 });
